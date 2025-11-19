@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Facility |">
+  <!-- HERO -->
+  <section class="relative h-[40vh] md:h-[55vh] bg-gradient-to-br from-green-700 via-green-600 to-green-500">
+    <div class="absolute inset-0 bg-black/20"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 h-full flex flex-col justify-center items-start">
+      <p class="text-sm md:text-base text-green-100 font-semibold uppercase mb-2">Our Facilities</p>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white max-w-3xl leading-tight">Fasilitas Produksi & Penunjang Berkualitas Tinggi</h1>
+
+      <p class="mt-4 text-sm md:text-base text-green-50 max-w-2xl">Infrastruktur modern untuk produksi steril & non-steril, laboratorium QC berstandar internasional, dan pusat distribusi terkontrol.</p>
+    </div>
+  </section>
+
+  <!-- PRODUCT OVERVIEW (image left, text right) -->
+  <section class="py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-10">
+        <!-- Image -->
+        <div class="w-full md:w-1/2 flex justify-center">
+          <div class="w-full rounded-2xl overflow-hidden shadow-lg">
+            <img src="/images/facility.png" alt="Row of pharmaceutical products" class="w-full object-contain" />
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="w-full md:w-1/2">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700 mb-6">Manufacture Facility</h2>
+          <p class="text-gray-800 leading-relaxed text-sm sm:text-base md:text-lg">
+            Dari sediaan steril seperti Infus, Injeksi Ampul dan Vial, hingga sediaan oral seperti Tablet dan Sirup, kami menawarkan total
+            <strong class="text-green-700">512 produk</strong> berkualitas tinggi. <strong class="text-green-700">60 produk unggulan</strong> kami merupakan hasil riset mendalam yang terbukti efektif di pasar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITY MAP -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-green-700 mb-6">Facility Layout</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-8">Denah gedung produksi & area pendukung kami.</p>
+
+      <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+        <strong>MYTHA PHARMA</strong> memiliki tata letak fasilitas produksi farmasi yang sangat terstruktur dengan dimensi total sekitar <strong>170M x 350M</strong>. Denah ini menunjukkan pembagian area yang ketat berdasarkan fungsi, klasifikasi kebersihan, dan alur material/personel, yang merupakan persyaratan utama dalam CPOB (Good Manufacturing Practice).
+      </p>
+       
+      <div class="mb-6">
+        <div class="rounded-xl overflow-hidden shadow-xl inline-block w-full max-w-3xl">
+          <img src="/images/denah-facility.png" alt="Denah Gedung Mytha Pharma" class="w-full h-[360px] md:h-[480px]" />
+        </div>
+      </div>
+
+      <div class="flex justify-center gap-4">
+        <button
+          onclick="document.getElementById('facilities-cards').scrollIntoView({behavior:'smooth'})"
+          class="inline-flex items-center px-5 py-3 bg-white border border-gray-200 text-gray-800 rounded-full shadow hover:shadow-md transition"
+        >
+          Lihat Detail Fasilitas
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div id="facilities-cards" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- CARD 1 -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+      <h3 class="text-xl font-semibold mb-4 text-blue-700">1. Zona Produksi & Pengolahan Inti</h3>
+      <p class="text-gray-600 leading-relaxed">
+        <strong>Pembuatan Produk Steril:</strong> Area di sisi kiri denah menunjukkan fasilitas kritis seperti Pembuatan Water For Injection (WFI) dan Pembuatan Purified Water, serta Tangki Air. Ini adalah bahan baku utama untuk produk steril.
+        <br /><br />
+        <strong>Zona Pengemasan:</strong> Area di sisi kanan tengah, meliputi Filling Area (IA), Sealing Area (IA), Pengemas Primer, dan Pengemas Sekunder. Penandaan (IA) kemungkinan merujuk pada Injeksi Area atau Area Kelas A/B yang membutuhkan standar kebersihan tertinggi.
+        <br /><br />
+        <strong>Sterilisasi:</strong> Terdapat area Sterilisasi Gas (II) dan Sterilisasi Gamma (II), menunjukkan kemampuan pabrik untuk memproses berbagai jenis produk, baik produk steril panas/gas maupun produk iradiasi.
+      </p>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+      <h3 class="text-xl font-semibold mb-4 text-green-700">2. Zona Penunjang Kualitas & Utilitas</h3>
+      <p class="text-gray-600 leading-relaxed">
+        <strong> Area Pengawasan Kualitas:</strong> Area Evaluation Area (IA) di pusat menunjukkan adanya pemeriksaan dan pengujian kualitas produk di tengah proses.
+        <br /><br />
+        <strong>Pengolahan Limbah:</strong> Limbah Padat, Limbah Cair, dan Penanganan Bahan Berbahaya ditempatkan di sudut-sudut yang terpisah (terutama di sisi atas dan kiri) untuk mencegah kontaminasi silang dengan area produksi bersih.
+        <br /><br />
+        <strong>Green Area & Lingkungan:</strong> Adanya Green Area dan Limbah Cair/Padat yang terpisah di sisi kiri menunjukkan komitmen perusahaan terhadap aspek lingkungan, sejalan dengan program CSR "Green Pharma" yang sudah Anda jelaskan sebelumnya.
+      </p>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+      <h3 class="text-xl font-semibold mb-4 text-purple-700">3. Alur Personel & Keamanan</h3>
+      <p class="text-gray-600 leading-relaxed">
+        <strong>Air Lock & Koridor:</strong> Penggunaan Air lock di banyak pintu masuk menunjukkan kontrol ketat terhadap tekanan udara dan kebersihan ruangan. Ini sangat penting untuk mencegah masuknya kontaminan.
+        <br /><br />
+        <strong>Pemisahan Personel:</strong> Area seperti Ruang Ganti Pakaian Pria/Wanita, Ruang Istirahat, dan Office dipisahkan dari koridor produksi bersih untuk menjaga alur personel tetap terkendali.
+        <br /><br />
+        <strong>Area Umum:</strong> Terdapat fasilitas umum seperti Masjid, Kantin, Area Pemasaran, dan Ruang Tunggu Konsumen, yang menunjukkan bahwa denah ini tidak hanya mencakup area produksi, tetapi juga fasilitas untuk karyawan dan tamu.
+      </p>
+    </div>
+  </div>
+
+  <!-- CTA CONTACT -->
+  <section class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-6 justify-between">
+      <div>
+        <h5 class="text-lg font-bold text-gray-800">Butuh informasi lebih lanjut?</h5>
+        <p class="text-gray-600 text-sm">Hubungi tim kami untuk tur fasilitas atau permintaan kerja sama.</p>
+      </div>
+      <div class="flex gap-3">
+        <a href="/contact-us" class="inline-block px-5 py-3 bg-green-700 text-white rounded-full shadow hover:bg-green-600 transition">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>

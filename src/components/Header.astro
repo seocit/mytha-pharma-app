@@ -1,0 +1,50 @@
+---
+
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg shadow">
+  <nav class="max-w-7xl mx-auto flex items-center justify-between py-4 px-6">
+    
+    <!-- Logo / Nama -->
+    <a href="/" class="text-2xl font-bold text-blue-600 tracking-wide">
+      Mytha Pharma
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+      <li><a href="/" class="hover:text-blue-600">Home</a></li>
+      <li><a href="/.html#about-us" class="hover:text-blue-600">About Us</a></li>
+      <li><a href="/company-structure" class="hover:text-blue-600">Company Structure</a></li>
+      <li><a href="/facility" class="hover:text-blue-600">Facility</a></li>
+      <li><a href="/product" class="hover:text-blue-600">Product</a></li>
+      <li><a href="/our-impact" class="hover:text-blue-600">Our Impact</a></li>
+      <li><a href="/contact-us" class="hover:text-blue-600">Contact Us</a></li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-btn" class="md:hidden text-gray-700 text-3xl">
+      ☰
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <ul id="mobile-menu" class="md:hidden hidden flex-col bg-white shadow p-6 space-y-4 text-gray-700 font-medium">
+    <li><a href="/" class="block">Home</a></li>
+    <li><a href="/.html#about-us" class="block">About Us</a></li>
+    <li><a href="/company-structure" class="block">Company Structure</a></li>
+    <li><a href="/facility" class="block">Facility</a></li>
+    <li><a href="/product" class="block">Product</a></li>
+    <li><a href="/our-impact" class="block">Our Impact</a></li>
+    <li><a href="/contact-us" class="block">Contact Us</a></li>
+  </ul>
+
+</header>
+
+<script>
+  const btn = document.getElementById("mobile-btn");
+  const menu = document.getElementById("mobile-menu");
+
+  btn?.addEventListener("click", () => {
+    menu?.classList.toggle("hidden");
+  });
+</script>

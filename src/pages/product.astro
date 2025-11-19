@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import products from "../data/products.js";
+---
+
+<Layout title="Products |">
+  <!-- Hero Section / Header -->
+  <header class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-12 mb-8 rounded-b-lg shadow-md">
+    <div class="max-w-7xl mx-auto px-4 text-center mt-15">
+      <h1 class="text-4xl font-extrabold mb-2">Our Products</h1>
+      <p class="text-lg opacity-90">Explore our wide range of medical products, from INFUS to VIALs.</p>
+    </div>
+  </header>
+
+  <!-- Product Section -->
+  <section class="px-4 py-8 max-w-7xl mx-auto">
+    {products.map(category => (
+      <div class="category mb-12" >
+        <h2 class="text-3xl font-bold mb-6 text-gray-800 border-b-2 border-gray-200 pb-2">{category.category}</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {category.items.map(item => (
+            <div class="item-card bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition transform hover:-translate-y-1 cursor-pointer">
+              <img src={item.image} alt={item.name} class="w-full h-40 object-cover" />
+              <div class="p-4">
+                <h3 class="font-semibold text-lg text-gray-900 mb-1">{item.name}</h3>
+                <p class="text-gray-600 text-sm">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ))}
+  </section>
+</Layout>

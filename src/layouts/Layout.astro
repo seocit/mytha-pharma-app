@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/jpg" href="/images/Logo.jpg" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>{title} Mytha Pharma</title>
+  </head>
+  <body class="bg-[#FAFAFA]">
+    <!-- navbar -->
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-gray-900 text-gray-300 mt-20 pb-5">
+      <!-- Bottom -->
+      <div class="border-t border-gray-700 pt-6 text-center text-gray-400 text-sm mb-12">
+        <p>© 2025 MYTHA PHARMA. All rights reserved.</p>
+        <p class="text-green-400 mt-2 font-medium">#MYTHA_PHARMA_Innovation_Beyond_Health #MYTHA_Dari_Riset_Lokal_Untuk_Dunia</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
